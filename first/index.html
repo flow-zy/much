@@ -23,5 +23,22 @@
       r.collapse(true)
       r.select()
     }
+    /**
+     *禁止重复调用、只允许执行一次函数
+     * 调用：  once(function() {console.log('Fired!')})
+     * @param {*} fn回调函数
+     * @param {*} context
+     * @returns
+     */
+    function once(fn, context) { 
+      var result
+      return function() { 
+        if(fn) {
+          result = fn.apply(context || this, arguments)
+          fn = null
+        }
+        return result
+      }
+    }
   </script>
 </html>

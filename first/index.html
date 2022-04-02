@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style></style>
+</head>
+<body>
+  <div class="war"></div>
+</body>
+  <script>
+    console.log('今天又是摸鱼的一天');
+    /* 
+     * 光标定位到最后
+    */
+    function curPostLast() {
+      var e = event.srcElement
+      var r = e.createTextRange()
+      r.moveStart("character", e.value.length)
+      r.collapse(true)
+      r.select()
+    }
+  </script>
+</html>
